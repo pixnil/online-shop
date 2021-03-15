@@ -1,0 +1,185 @@
+[
+    {
+      "id": 1,
+      "name": "KBC",
+      "description": "Book Store. We provides all kind of stationary. ",
+      "isPublished": true,
+      "orderEmail": "pixniltech@gmail.com",
+      "whatsappNumber": 919975073891,
+      "sellerId": "1",
+      "published_at": "2021-03-15T05:53:06.227Z",
+      "created_at": "2021-03-15T05:52:47.773Z",
+      "updated_at": "2021-03-15T05:53:06.257Z",
+      "logo": {
+        "id": 18,
+        "name": "gatsby.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 600,
+        "height": 600,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_gatsby.png",
+            "hash": "thumbnail_gatsby_4fe6f1ab5f",
+            "ext": ".png",
+            "mime": "image/.png",
+            "width": 156,
+            "height": 156,
+            "size": 22.52,
+            "path": null,
+            "url": "/uploads/thumbnail_gatsby_4fe6f1ab5f.png"
+          },
+          "small": {
+            "name": "small_gatsby.png",
+            "hash": "small_gatsby_4fe6f1ab5f",
+            "ext": ".png",
+            "mime": "image/.png",
+            "width": 500,
+            "height": 500,
+            "size": 157.19,
+            "path": null,
+            "url": "/uploads/small_gatsby_4fe6f1ab5f.png"
+          }
+        },
+        "hash": "gatsby_4fe6f1ab5f",
+        "ext": ".png",
+        "mime": "image/.png",
+        "size": 150.66,
+        "url": "/uploads/gatsby_4fe6f1ab5f.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "created_at": "2021-03-06T03:23:15.499Z",
+        "updated_at": "2021-03-06T03:23:15.499Z"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Angular",
+      "description": "Store for angular materials. The framework material for Angular learner.",
+      "isPublished": true,
+      "orderEmail": "pixniltech@gmail.com",
+      "whatsappNumber": 919975073891,
+      "sellerId": "2",
+      "published_at": "2021-03-15T05:58:46.977Z",
+      "created_at": "2021-03-15T05:58:42.638Z",
+      "updated_at": "2021-03-15T05:58:47.007Z",
+      "logo": {
+        "id": 25,
+        "name": "angular.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 375,
+        "height": 375,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_angular.png",
+            "hash": "thumbnail_angular_a08f02870a",
+            "ext": ".png",
+            "mime": "image/.png",
+            "width": 156,
+            "height": 156,
+            "size": 15.4,
+            "path": null,
+            "url": "/uploads/thumbnail_angular_a08f02870a.png"
+          }
+        },
+        "hash": "angular_a08f02870a",
+        "ext": ".png",
+        "mime": "image/.png",
+        "size": 9.75,
+        "url": "/uploads/angular_a08f02870a.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "created_at": "2021-03-06T03:23:16.978Z",
+        "updated_at": "2021-03-06T03:23:16.978Z"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Linux",
+      "description": "Linux store. An open source operating system for all.",
+      "isPublished": true,
+      "orderEmail": "pixniltech@gmail.com",
+      "whatsappNumber": 601162345788,
+      "sellerId": "3",
+      "published_at": "2021-03-15T06:00:35.709Z",
+      "created_at": "2021-03-15T06:00:31.518Z",
+      "updated_at": "2021-03-15T06:00:35.741Z",
+      "logo": {
+        "id": 23,
+        "name": "linux.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 375,
+        "height": 375,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_linux.png",
+            "hash": "thumbnail_linux_5ccf6cc004",
+            "ext": ".png",
+            "mime": "image/.png",
+            "width": 156,
+            "height": 156,
+            "size": 19.36,
+            "path": null,
+            "url": "/uploads/thumbnail_linux_5ccf6cc004.png"
+          }
+        },
+        "hash": "linux_5ccf6cc004",
+        "ext": ".png",
+        "mime": "image/.png",
+        "size": 16.28,
+        "url": "/uploads/linux_5ccf6cc004.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "created_at": "2021-03-06T03:23:16.447Z",
+        "updated_at": "2021-03-06T03:23:16.447Z"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Python",
+      "description": "A programming language. High performance coding experience! ",
+      "isPublished": true,
+      "orderEmail": "pixnilweb@gmail.com",
+      "whatsappNumber": 919975073891,
+      "sellerId": "4",
+      "published_at": "2021-03-15T06:03:30.740Z",
+      "created_at": "2021-03-15T06:03:26.401Z",
+      "updated_at": "2021-03-15T06:03:30.764Z",
+      "logo": {
+        "id": 21,
+        "name": "python.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 375,
+        "height": 375,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_python.png",
+            "hash": "thumbnail_python_bc3b638935",
+            "ext": ".png",
+            "mime": "image/.png",
+            "width": 156,
+            "height": 156,
+            "size": 14.16,
+            "path": null,
+            "url": "/uploads/thumbnail_python_bc3b638935.png"
+          }
+        },
+        "hash": "python_bc3b638935",
+        "ext": ".png",
+        "mime": "image/.png",
+        "size": 7.17,
+        "url": "/uploads/python_bc3b638935.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "created_at": "2021-03-06T03:23:16.093Z",
+        "updated_at": "2021-03-06T03:23:16.093Z"
+      }
+    }
+  ]
