@@ -15,10 +15,9 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title key="title">{DEFAULT_SEO.title}</title>
-        <meta charset="utf-8"></meta>
+        <meta charSet="utf-8"></meta>
 		    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
 		    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-		    <link href="https://unpkg.com/tailwindcss@0.3.0/dist/tailwind.min.css" rel="stylesheet"></link>
         <meta name="description" content={DEFAULT_SEO.description} />
         <link
           rel="stylesheet"
