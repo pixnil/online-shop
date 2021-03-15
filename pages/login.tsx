@@ -8,14 +8,6 @@ const Login: FunctionComponent = () => {
   };
 
   return (
-	<html lang="en">
-	<head>
-		<meta charset="utf-8"></meta>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
-		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-		<link href="https://unpkg.com/tailwindcss@0.3.0/dist/tailwind.min.css" rel="stylesheet"></link>
-	</head>
-	<body class="h-screen overflow-hidden flex items-center justify-center" styles="background: #edf2f7;">
 	<div styles="height: 500px">
 		<div class="fixed pin flex items-center">
 			<div class="fixed pin bg-black opacity-75 z-10"></div>
@@ -62,8 +54,6 @@ const Login: FunctionComponent = () => {
 			</div>
 		</div>
 	</div>
-	</body>
-	</html>
   );
 };
 
