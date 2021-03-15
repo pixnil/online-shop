@@ -8,9 +8,6 @@ const Login: FunctionComponent = () => {
   };
 
   return (
-    <div className="container">
-      Login Form html will be here
-    </div>
   );
 };
 
