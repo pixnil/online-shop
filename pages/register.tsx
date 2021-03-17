@@ -1,9 +1,19 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useState } from "react";
 
 const Login: FunctionComponent = () => {
-  // Login
-  const handleLogin = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const [state, setstate] = useState({
+    name: '',
+    email: '',
+    phone: '',
+  });
+
+  const handleRegister = () => {
     // Authenticate user here
+    console.log('Data ', state);
+  };
+
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement>, stateKey: string) => {
+    setstate({...state, [stateKey]: e.target.value});
   };
 
   return (
@@ -13,35 +23,13 @@ const Login: FunctionComponent = () => {
           <div className="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
             <div className="text-center">
               <h1 className="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">
-                Contact Us
+                Register
               </h1>
               <p className="text-gray-400 dark:text-gray-400">
-                Fill up the form below to send us a message.
+                We will send you an email for verification purpose.
               </p>
             </div>
             <div className="m-7">
-              <form
-                action="https://api.web3forms.com/submit"
-                method="POST"
-                id="form"
-              >
-                <input
-                  type="hidden"
-                  name="apikey"
-                  value="YOUR_ACCESS_KEY_HERE"
-                />
-                <input
-                  type="hidden"
-                  name="subject"
-                  value="New Submission from Web3Forms"
-                />
-                <input
-                  type="checkbox"
-                  name="botcheck"
-                  id=""
-                  style={{ display: "none" }}
-                />
-
                 <div className="mb-6">
                   <label
                     htmlFor="name"
@@ -53,8 +41,9 @@ const Login: FunctionComponent = () => {
                     type="text"
                     name="name"
                     id="name"
-                    placeholder="John Doe"
+                    placeholder="Enter name"
                     required
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleFormChange(e, 'name')}
                     className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
                   />
                 </div>
@@ -69,8 +58,9 @@ const Login: FunctionComponent = () => {
                     type="email"
                     name="email"
                     id="email"
-                    placeholder="you@company.com"
+                    placeholder="you@xxx.com"
                     required
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleFormChange(e, 'email')}
                     className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
                   />
                 </div>
@@ -85,41 +75,21 @@ const Login: FunctionComponent = () => {
                     type="text"
                     name="phone"
                     id="phone"
-                    placeholder="+1 (555) 1234-567"
+                    placeholder="+91 98XXXXXXXX"
                     required
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleFormChange(e, 'phone')}
                     className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
                   />
                 </div>
                 <div className="mb-6">
-                  <label
-                    htmlFor="message"
-                    className="block mb-2 text-sm text-gray-600 dark:text-gray-400"
-                  >
-                    Your Message
-                  </label>
-
-                  <textarea
-                    rows={5}
-                    name="message"
-                    id="message"
-                    placeholder="Your Message"
-                    className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
-                    required
-                  ></textarea>
-                </div>
-                <div className="mb-6">
                   <button
-                    type="submit"
+                    type="button"
+                    onClick={handleRegister}
                     className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none"
                   >
-                    Send Message
+                    Register
                   </button>
                 </div>
-                <p
-                  className="text-base text-center text-gray-400"
-                  id="result"
-                ></p>
-              </form>
             </div>
           </div>
         </div>
