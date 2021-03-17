@@ -48,7 +48,7 @@ const Items: FunctionComponent<{ products: ProductWeb[] }> = ({ products }) => {
   };
 
   return (
-    <div className="container">
+    <>
       <Header
         handleSearch={handleSearch}
         resetSearch={resetSearch}
@@ -65,7 +65,7 @@ const Items: FunctionComponent<{ products: ProductWeb[] }> = ({ products }) => {
         openModalState={modalActive}
         closeModal={closeModal}
       />
-    </div>
+    </>
   );
 };
 export default Items;

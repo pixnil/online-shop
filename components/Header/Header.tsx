@@ -10,12 +10,20 @@ import useClickOutside from "../../util/clickOutside";
 /* eslint-disable consistent-return */
 
 type Props = {
-  handleSearch: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  resetSearch: () => void;
-  searchValue: string;
+  handleSearch?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  resetSearch?: () => void;
+  searchValue?: string;
+  renderCart?: boolean;
+  renderSearch?: boolean;
 };
 
-const Header = ({ handleSearch, resetSearch, searchValue }: Props) => {
+const Header = ({
+  handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {},
+  resetSearch = () => {},
+  searchValue = "",
+  renderCart = true,
+  renderSearch = true,
+}: Props) => {
   const [showCart, flipState] = useState<boolean>(false);
   const [mobileSearch, setSearch] = useState<boolean>(false);
 
@@ -144,91 +152,95 @@ const Header = ({ handleSearch, resetSearch, searchValue }: Props) => {
           />
         </div>
 
-        <div className={styles.search}>
-          <button
-            className={styles.mobileSearch}
-            onClick={handleMobileSearch}
-            type="button"
-          >
-            <img
-              src="https://res.cloudinary.com/sivadass/image/upload/v1494756966/icons/search-green.png"
-              alt="search"
-            />
-          </button>
-          <form
-            action="#"
-            method="get"
-            className={
-              mobileSearch
-                ? `${styles.searchForm} ${styles.active}`
-                : `${styles.searchForm}`
-            }
-          >
+        {renderSearch && (
+          <div className={styles.search}>
             <button
-              className={styles.backButton}
-              onClick={handleSearchNav}
+              className={styles.mobileSearch}
+              onClick={handleMobileSearch}
               type="button"
             >
               <img
-                src="https://res.cloudinary.com/sivadass/image/upload/v1494756030/icons/back.png"
-                alt="back"
+                src="https://res.cloudinary.com/sivadass/image/upload/v1494756966/icons/search-green.png"
+                alt="search"
               />
             </button>
-            <input
-              type="search"
-              placeholder="Search for Vegetables and Fruits"
-              className={styles.searchKeyword}
-              value={searchValue}
-              onChange={handleSearch}
-            />
-            <button
-              className={styles.searchButton}
-              type="submit"
-              onClick={handleSubmit}
-              aria-label="submit"
-            />
-          </form>
-        </div>
-
-        <div className={styles.cart}>
-          <div className={styles.cartInfo}>
-            <table>
-              <tbody>
-                <tr>
-                  <td>No. of items</td>
-                  <td>:</td>
-                  <td>
-                    <strong>{totalItems}</strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Sub Total</td>
-                  <td>:</td>
-                  <td>
-                    <strong>{totalAmount}</strong>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <form
+              action="#"
+              method="get"
+              className={
+                mobileSearch
+                  ? `${styles.searchForm} ${styles.active}`
+                  : `${styles.searchForm}`
+              }
+            >
+              <button
+                className={styles.backButton}
+                onClick={handleSearchNav}
+                type="button"
+              >
+                <img
+                  src="https://res.cloudinary.com/sivadass/image/upload/v1494756030/icons/back.png"
+                  alt="back"
+                />
+              </button>
+              <input
+                type="search"
+                placeholder="Search for Vegetables and Fruits"
+                className={styles.searchKeyword}
+                value={searchValue}
+                onChange={handleSearch}
+              />
+              <button
+                className={styles.searchButton}
+                type="submit"
+                onClick={handleSubmit}
+                aria-label="submit"
+              />
+            </form>
           </div>
-          <button
-            className={styles.cartIcon}
-            onClick={handleCart}
-            type="button"
-          >
-            <img
-              className={bounce ? styles.tada : " "}
-              src="https://res.cloudinary.com/sivadass/image/upload/v1493548928/icons/bag.png"
-              alt="Cart"
-            />
-            {totalItems ? (
-              <span className={styles.cartCount}>{totalItems}</span>
-            ) : (
-              ""
-            )}
-          </button>
-          {cartBox}
-        </div>
+        )}
+
+        {renderCart && (
+          <div className={styles.cart}>
+            <div className={styles.cartInfo}>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>No. of items</td>
+                    <td>:</td>
+                    <td>
+                      <strong>{totalItems}</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Sub Total</td>
+                    <td>:</td>
+                    <td>
+                      <strong>{totalAmount}</strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button
+              className={styles.cartIcon}
+              onClick={handleCart}
+              type="button"
+            >
+              <img
+                className={bounce ? styles.tada : " "}
+                src="https://res.cloudinary.com/sivadass/image/upload/v1493548928/icons/bag.png"
+                alt="Cart"
+              />
+              {totalItems ? (
+                <span className={styles.cartCount}>{totalItems}</span>
+              ) : (
+                ""
+              )}
+            </button>
+            {cartBox}
+          </div>
+        )}
       </div>
     </header>
   );
